@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen - Login & Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="bg-shapes">
+                <div class="shape circle"></div>
+                <div class="shape triangle"></div>
+                <div class="shape square"></div>
+            </div>
+            
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+                </div>
+                
+                <form id="login-form" class="input-group">
+                    <div class="input-container">
+                        <input type="text" id="login-email" class="input-field" placeholder="Email" required>
+                        <span class="input-highlight"></span>
+                        <div class="error-message" id="login-email-error"></div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="password" id="login-password" class="input-field" placeholder="Password" required>
+                        <span class="input-highlight"></span>
+                        <div class="error-message" id="login-password-error"></div>
+                    </div>
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Login</button>
+                    
+                    <div class="forgot-password">
+                        <a href="#" id="forgot-password-link">Forgot Password?</a>
+                    </div>
+                </form>
+                
+                <form id="signup-form" class="input-group">
+                    <div class="input-container">
+                        <input type="text" id="signup-name" class="input-field" placeholder="Full Name" required>
+                        <span class="input-highlight"></span>
+                        <div class="error-message" id="signup-name-error"></div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="email" id="signup-email" class="input-field" placeholder="Email" required>
+                        <span class="input-highlight"></span>
+                        <div class="error-message" id="signup-email-error"></div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="password" id="signup-password" class="input-field" placeholder="Password" required>
+                        <span class="input-highlight"></span>
+                        <div class="password-strength-meter">
+                            <div class="strength-bar">
+                                <div class="strength-indicator" id="strength-indicator"></div>
+                            </div>
+                            <span class="strength-text" id="strength-text">Password strength</span>
+                        </div>
+                        <div class="error-message" id="signup-password-error"></div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="password" id="signup-confirm" class="input-field" placeholder="Confirm Password" required>
+                        <span class="input-highlight"></span>
+                        <div class="error-message" id="signup-confirm-error"></div>
+                    </div>
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms">
+                        <label for="terms">I agree to the Terms & Conditions</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h1>Welcome to <span>Canteen</span></h1>
+                <p>Your favorite meals, just a click away!</p>
+                <div class="food-icons">
+                    <div class="food-icon burger"></div>
+                    <div class="food-icon pizza"></div>
+                    <div class="food-icon coffee"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Reset Modal -->
+    <div id="password-reset-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Reset Password</h2>
+            <p>Enter your email address to receive a password reset link.</p>
+            <form id="reset-password-form">
+                <div class="input-container">
+                    <input type="email" id="reset-email" class="input-field" placeholder="Email" required>
+                    <span class="input-highlight"></span>
+                    <div class="error-message" id="reset-email-error"></div>
+                </div>
+                <button type="submit" class="submit-btn">Send Reset Link</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
