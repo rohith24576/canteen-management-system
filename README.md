@@ -73,7 +73,7 @@ A high-performance, interactive web application designed to optimize the campus 
 
 1.  **Repository Acquisition**:
     ```bash
-    git clone https://github.com/Sreeram5678/canteen-management-system.git
+    git clone [repository-url]
     ```
 2.  **Initialization**:
     Open `login.html` via a modern web browser to initiate the system.
